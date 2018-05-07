@@ -22,4 +22,20 @@ public abstract class Enemy implements Description {
 	
 	public abstract void attack();
 	
+	//Modifier methods
+	public void setDesc(String desc) { this.desc = desc; }
+	public void setType(Type type) { this.type = type; }
+	public void setHP(int hp) { this.hp = hp; }
+	public void setATT(int att) { this.att = att; }
+	public void setSP(int sp) { this.sp = sp; }
+	
+	//Accessor methods
+	public String getName() { return name; }
+	public String getDesc() { return desc; }
+	public Type getType() { return type; }
+	public int getHP() { return hp; }
+	public int getATT() { return att; }
+	public int getDEF() { return def; }
+	public int getSP() { return sp; }
+	
 }

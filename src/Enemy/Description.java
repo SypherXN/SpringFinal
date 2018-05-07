@@ -2,7 +2,16 @@ package Enemy;
 
 public interface Description {
 
-	void setDesc();
+	/** Sets the description of the enemy
+	 * 
+	 * @param desc - Description of the Enemy
+	 */
+	void setDesc(String desc);
+	
+	/** Returns the description of the enemy
+	 * 
+	 * @return - Description of the Enemy
+	 */
 	String getDesc();
 	
 }

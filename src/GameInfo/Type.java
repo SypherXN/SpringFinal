@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public class Type {
 
 	private String type;
-	private ArrayList<Type> resistanceList;
-	private ArrayList<Type> weaknessList;
+	private ArrayList<Type> resistanceList = new ArrayList<Type> ();
+	private ArrayList<Type> weaknessList = new ArrayList<Type> ();
 	
 	/** Creates a reference for Type
 	 * 
@@ -24,6 +24,8 @@ public class Type {
 	 */
 	public void addWeakness(Type...types) {
 		
+		if (types.length == 0) { return; }
+		
 		for(Type element : types) {
 			
 			resistanceList.add(element);
@@ -37,6 +39,8 @@ public class Type {
 	 * @param types - List of types that Type is resistant to
 	 */
 	public void addResistances(Type...types) {
+		
+		if (types.length == 0) { return; }
 		
 		for(Type element : types) {
 			
