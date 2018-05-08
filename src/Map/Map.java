@@ -31,6 +31,29 @@ public class Map {
 		
 	}
 	
+	/** Attempts to move player to the adjacent tile in the desired direction
+	 * 
+	 * @param direction - Direction that the player wants to move and discovers the tile
+	 * @return - Returns false if there is no space to the desired direction and true if player moves to new tile
+	 */
+	public static boolean moveAdjacent(String direction) {
+		
+		if (direction.equals("L") && (currentCol == 0)) return false;
+		else if (direction.equals("R") && (currentCol == 4)) return false;
+		else if (direction.equals("U") && (currentRow == 0)) return false;
+		else if (direction.equals("D") && (currentRow == 4)) return false;
+		
+		if (direction.equals("L")) currentCol--;
+		else if (direction.equals("R")) currentCol++;
+		else if (direction.equals("U")) currentRow++;
+		else if (direction.equals("D")) currentRow--;
+		
+		discoverLocation(currentRow, currentCol);
+		
+		return true;
+		
+	}
+	
 	/** Adds the Location to the knownMap from map
 	 * 
 	 * @param row - row of the location discovered
@@ -75,8 +98,17 @@ public class Map {
 			
 			for (int col = 0; col < map[row].length; col++) {
 				
-				output += "[" + counter + "]\t";
-				counter++;
+				if ((row == currentRow) && (col == currentCol)) { 
+					
+					output += "[X]\t";
+					counter++;
+					
+				} else { 
+					
+					output += "[" + counter + "]\t";
+					counter++;
+					
+				}
 				
 			}
 			
@@ -87,5 +119,9 @@ public class Map {
 		return output;
 		
 	}
+	
+	//Accessor Methods
+	public static int getCurrentRow() { return currentRow; }
+	public static int getCurrentCol() { return currentCol; }
 	
 }
