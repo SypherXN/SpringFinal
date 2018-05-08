@@ -1,13 +1,22 @@
 package Items;
 
-public abstract class Item {
+import GameInfo.Description;
 
-	private String name;
+public abstract class Item implements Description {
+
+	private String name, desc;
 	
-	public Item(String name) { 
+	public Item(String name, String desc) { 
 		
 		this.name = name;
+		this.desc = desc;
 		
 	}
+	
+	//Modifier Methods
+	public void setDesc(String desc) { this.desc = desc; }
+	
+	//Accessor Methods
+	public String getDesc() { return desc; }
 	
 }

@@ -32,6 +32,15 @@ public abstract class Location implements Description {
 		
 	}
 	
+	/** Sorts the enemy by level of difficulty
+	 * 
+	 */
+	public void sortEnemies() {
+		
+		for(int i = 0; i < enemies.size())
+		
+	}
+	
 	//Modifier Methods
 	public void setName(String name) { this.name = name; }
 	public void setDesc(String desc) { this.desc = desc; }
