@@ -8,7 +8,7 @@ public class PlayerInfo {
 	private static String name;
 	private static int maxHP, hp, att, def, sp;
 	
-	/** Initializes te player and asks for name and sets stats
+	/** Initializes the player and asks for name and sets stats
 	 * 
 	 */
 	public static void initPlayer() {
