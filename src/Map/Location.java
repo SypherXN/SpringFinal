@@ -2,8 +2,9 @@ package Map;
 
 import java.util.*;
 import Enemy.*;
+import GameInfo.*;
 
-public abstract class Location {
+public abstract class Location implements Description {
 
 	private String name;
 	private ArrayList<Enemy> enemies = new ArrayList<Enemy> ();

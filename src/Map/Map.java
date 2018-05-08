@@ -55,7 +55,8 @@ public class Map {
 			
 		} else {
 			
-			System.out.println(knownMap[row][col].getDesc());
+			System.out.println("Name: " + knownMap[row][col].getName());
+			System.out.println("Description: " + knownMap[row][col].getDesc());
 			
 		}
 		

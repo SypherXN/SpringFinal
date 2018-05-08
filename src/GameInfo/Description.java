@@ -1,4 +1,4 @@
-package Enemy;
+package GameInfo;
 
 public interface Description {
 
