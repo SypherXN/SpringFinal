@@ -1,13 +1,11 @@
 package Main;
 
-import GameInfo.*;
-import Player.*;
-import Enemy.*;
-import Map.*;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Scanner;
+import Combat.Battle;
+import Items.Bidoof;
+import Items.Sword;
+import Items.TestPotion;
+import Items.TestWeapon;
+import Player.PlayerInfo;
 
 public class MainGame {
 
@@ -51,6 +49,13 @@ public class MainGame {
 		System.out.println();
 		System.out.println(Map.printKnownMap());
 		*/
+		
+		PlayerInfo.addItem(new TestPotion("Test Potion", "This is a test"));
+		PlayerInfo.addItem(new Sword("Sword", "Another test"));
+		PlayerInfo.addItem(new TestWeapon("Test Weapon", "This is a test"));
+		PlayerInfo.addItem(new Bidoof("Bidoof", "Pokemon"));
+		
+		Battle.itemMenu();
 		
 	}
 	

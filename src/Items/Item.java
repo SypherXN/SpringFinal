@@ -18,6 +18,8 @@ public abstract class Item implements Description{
 		
 	}
 	
+	public String toString() { return name; }
+	
 	//Modifier Methods
 	public void setName(String name) { this.name = name; }
 	public void setDesc(String desc) { this.desc = desc; }

@@ -41,7 +41,7 @@ public interface Weapon{
 	 */
 	int getTargetEffect();
 	
-	/**Sets the durability of the weapon
+	/** Sets the durability of the weapon
 	 * 
 	 * @param durability - The durability of the weapon
 	 */
