@@ -4,8 +4,7 @@ import GameInfo.Description;
 
 public abstract class Item implements Description {
 
-	private String name;
-	private String desc;
+	private String name, desc;
 	
 	public Item(String name, String desc) { 
 		
