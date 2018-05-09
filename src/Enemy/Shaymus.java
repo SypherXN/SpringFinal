@@ -13,11 +13,12 @@ public class Shaymus extends Enemy{
 	}
 	
 	public Shaymus() {
+		
 		super("Shaymus", Information.Normal, (int) Math.random()*999, (int) Math.random()*999, (int) Math.random()*999, (int) Math.random()*999, (int) Math.random()*999, "Completely random and unnecesary", (int) Math.random()*999);
+		
 	}
 
 	public void attack() {
-
 
 		Combat.takeDamage(super.getATT());
 		

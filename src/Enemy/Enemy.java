@@ -1,6 +1,8 @@
 package Enemy;
 
+import Combat.Combat;
 import GameInfo.*;
+import Player.PlayerInfo;
 
 public abstract class Enemy implements Description, Comparable<Enemy> {
 

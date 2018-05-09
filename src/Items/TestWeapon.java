@@ -17,21 +17,12 @@ public class TestWeapon extends Item implements Weapon {
 	public void setDamage(int damage) { this.damage = damage; }
 	public void setEffect(Effect effect) { this.effect = effect; }
 	public void setTargetEffect(int target) { this.target = target; }
-	public void setDurability(int durability) {this.durability = durability};
+	public void setDurability(int durability) {this.durability = durability; }
 	
 	//Accessor Methods
 	public int getDamage() { return damage; }
 	public Effect getEffect() { return effect; }
 	public int getTargetEffect() { return target; }
-
-	
-
-	}
-
-	@Override
-	public int getDurability() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+	public int getDurability() {return durability; }
 
 }
