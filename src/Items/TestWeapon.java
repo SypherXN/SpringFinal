@@ -25,6 +25,7 @@ public class TestWeapon extends Item implements Weapon {
 	public int getTargetEffect() { return target; }
 
 	
+
 	}
 
 	@Override
