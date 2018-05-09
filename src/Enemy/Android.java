@@ -4,24 +4,24 @@ import Combat.Combat;
 import GameInfo.*;
 import Player.PlayerInfo;
 
-public class Monkey extends Enemy{
+public class Android extends Enemy{
 
-	public Monkey(String name, Type type, int maxHP, int hp, int att, int def, int sp, String desc, int difficulty) {
+	public Android(String name, Type type, int maxHP, int hp, int att, int def, int sp, String desc, int difficulty) {
 		
 		super(name, type, maxHP, hp, att, def, sp, desc, difficulty);
 		
 	}
-	
-	public Monkey() {
+
+	public Android() {
 		
-		super("Monkey", Information.Normal, 10, 10, 10, 10, 10, "h", 1);
+		super("Android", Information.Normal, 50, 50, 5, 5, 5, "H", 2);
 		
 	}
 	
 	public void attack() {
-		
+
 		Combat.takeDamage(super.getATT());
 		
 	}
-	
+
 }

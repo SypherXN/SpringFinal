@@ -2,7 +2,7 @@ package Items;
 
 import Combat.*;
 
-public interface Weapon {
+public interface Weapon{
 
 	
 	/** Sets the damage of the weapon
@@ -40,6 +40,18 @@ public interface Weapon {
 	 * @return - The target of the weapon's effect (0 = self, 1 = enemy)
 	 */
 	int getTargetEffect();
+	
+	/**Sets the durability of the weapon
+	 * 
+	 * @param durability - The durability of the weapon
+	 */
+	void setDurability(int durability);
+	
+	/**Return the durability of the weapon
+	 * 
+	 * @return - The durability of the weapon
+	 */
+	int getDurability();
 	
 	
 }

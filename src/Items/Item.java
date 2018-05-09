@@ -2,7 +2,7 @@ package Items;
 
 import GameInfo.Description;
 
-public abstract class Item implements Description {
+public abstract class Item implements Description{
 
 	private String name, desc;
 	
