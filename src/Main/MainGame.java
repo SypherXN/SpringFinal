@@ -6,6 +6,7 @@ import Enemy.*;
 import Map.*;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class MainGame {
@@ -50,43 +51,6 @@ public class MainGame {
 		System.out.println();
 		System.out.println(Map.printKnownMap());
 		*/
-		
-		ArrayList<Integer> enemies = new ArrayList<Integer> ();
-		
-		for(int i = 0; i < 25; i++) {
-			
-			enemies.add((int)(Math.random() * 100));
-			
-		}
-		
-		for(int element : enemies) {
-			
-			System.out.print(element + " ");
-			
-		}
-		
-		System.out.println();
-		
-		for(int i = 0; i < enemies.size(); i++) {
-			
-			for(int x = i - 1; x > 0; x--) {
-				
-				if (enemies.get(x) > enemies.get(i) && enemies.get(x - 1) < enemies.get(i)) {
-					
-					enemies.add(x, enemies.remove(i));
-					break;
-					
-				}
-				
-			}
-			
-		}
-		
-		for(int element : enemies) {
-			
-			System.out.print(element + " ");
-			
-		}
 		
 	}
 	

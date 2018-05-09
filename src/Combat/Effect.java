@@ -7,6 +7,11 @@ public abstract class Effect implements Description {
 	private String name;
 	private String desc;
 	
+	/** Constructor for effect
+	 * 
+	 * @param name - name of the effect
+	 * @param desc - description of the effect
+	 */
 	public Effect(String name, String desc) {
 		
 		this.name = name;

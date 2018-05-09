@@ -10,6 +10,11 @@ public abstract class Location implements Description {
 	private ArrayList<Enemy> enemies = new ArrayList<Enemy> ();
 	private String desc;
 	
+	/** Constructor for Location
+	 * 
+	 * @param name - name of the location
+	 * @param desc - description of the location
+	 */
 	public Location(String name, String desc) {
 		
 		this.name = name;
@@ -35,23 +40,7 @@ public abstract class Location implements Description {
 	/** Sorts the enemy by level of difficulty
 	 * 
 	 */
-	public void sortEnemies() {
-		
-		for(int i = 0; i < enemies.size(); i++) {
-			
-			for(int x = i - 1; x > 0; x--) {
-				
-				if (enemies.get(x).getDifficulty() < enemies.get(i).getDifficulty()) {
-					
-					enemies.set(x, enemies.set(i, enemies.get(x)));
-					
-				}
-				
-			}
-			
-		}
-		
-	}
+	public void sortEnemies() { Collections.sort(enemies); }
 	
 	//Modifier Methods
 	public void setName(String name) { this.name = name; }

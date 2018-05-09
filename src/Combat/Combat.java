@@ -8,32 +8,21 @@ public class Combat {
 
 	private static Enemy enemy;
 	
-	/*Calculates damage dealt based on attack, defense, and weapon modifiers
+	/**
 	 * 
+	 * @param def - defense of the enemy
+	 * @param weapon - 
 	 */
-	public static void dealDamage(int att, int def, Weapon weapon) {
-		
-		if(def < att) {
-			enemy.setHP(enemy.getHP() - (att + weapon.getDamage() - def));
-		}
-		else {
-			enemy.setHP((enemy.getHP() - (def - att + weapon.getDamage()))/10);
-		}
-		
-	}
+	public static void dealDamage(int def, Weapon weapon) { enemy.modHP((-(def) * (100 / (100 + PlayerInfo.getDEF())))); }
 	
-	/*Calculates damage taken based on enemy's attack defense, and weapon modifiers
+	/**
 	 * 
+	 * @param att - attack of the enemy
+	 * @param def - defense of the player
 	 */
-	public static void takeDamage(int att, int def) {
-		
-		if(def < att) {
-			PlayerInfo.modHP(att - def);
-		}
-		else {
-			PlayerInfo.modHP(def - att);
-		}
-		
-	}
+	public static void takeDamage(int att) { PlayerInfo.modHP((-(att) * (100 / (100 + PlayerInfo.getDEF())))); }
+	
+	//Modifier Methods
+	public static void setEnemy(Enemy thing) { enemy = thing; }
 	
 }

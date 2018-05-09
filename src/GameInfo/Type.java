@@ -8,7 +8,7 @@ public class Type {
 	private ArrayList<Type> resistanceList = new ArrayList<Type> ();
 	private ArrayList<Type> weaknessList = new ArrayList<Type> ();
 	
-	/** Creates a reference for Type
+	/** Constructor for Type
 	 * 
 	 * @param type - Name of the type
 	 */
