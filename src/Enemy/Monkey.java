@@ -20,7 +20,7 @@ public class Monkey extends Enemy{
 	
 	public void attack() {
 		
-		Combat.takeDamage(super.getATT(), PlayerInfo.getDEF());
+		Combat.takeDamage(super.getATT());
 		
 	}
 	

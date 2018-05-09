@@ -47,6 +47,9 @@ public abstract class Enemy implements Description, Comparable<Enemy> {
 	 */
 	public int compareTo(Enemy other) { return ((Integer)difficulty).compareTo(other.getDifficulty()); }
 	
+	//toString method
+	public String toString() { return name; }
+	
 	//Combat Modifier Methods
 	public void modHP(int mod) { hp += mod; }
 	

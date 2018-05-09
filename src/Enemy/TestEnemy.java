@@ -2,7 +2,6 @@ package Enemy;
 
 import Combat.Combat;
 import GameInfo.*;
-import Player.PlayerInfo;
 
 public class TestEnemy extends Enemy {
 
@@ -20,7 +19,7 @@ public class TestEnemy extends Enemy {
 
 	public void attack() {
 		
-		Combat.takeDamage(super.getATT(), PlayerInfo.getDEF());
+		Combat.takeDamage(super.getATT());
 		
 	}
 
