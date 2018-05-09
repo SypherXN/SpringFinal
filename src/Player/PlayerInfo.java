@@ -22,10 +22,10 @@ public class PlayerInfo {
 		name = input.nextLine();
 		
 		maxHP = 50;
-		hp = 50;
-		att = 5;
-		def = 5;
-		sp = 5;
+		hp = (int) Math.random()*3 + 48;
+		att = (int) Math.random()*2 + 4;
+		def = (int) Math.random()*2 + 4;
+		sp = (int) Math.random()*2 + 4;
 		
 	}
 	
