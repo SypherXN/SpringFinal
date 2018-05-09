@@ -4,12 +4,15 @@ import GameInfo.*;
 import Player.*;
 import Enemy.*;
 import Map.*;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MainGame {
 
 	public static void main(String [] args) {
 		
+		/*
 		Scanner input = new Scanner(System.in);
 		
 		Information.initResistances();
@@ -32,10 +35,8 @@ public class MainGame {
 		
 		System.out.println(Map.printKnownMap());
 		
-		/*
 		System.out.print("Enter your desired direction: ");
 		String direction = input.nextLine();
-		*/
 		
 		String direction = "";
 		
@@ -48,6 +49,44 @@ public class MainGame {
 		
 		System.out.println();
 		System.out.println(Map.printKnownMap());
+		*/
+		
+		ArrayList<Integer> enemies = new ArrayList<Integer> ();
+		
+		for(int i = 0; i < 25; i++) {
+			
+			enemies.add((int)(Math.random() * 100));
+			
+		}
+		
+		for(int element : enemies) {
+			
+			System.out.print(element + " ");
+			
+		}
+		
+		System.out.println();
+		
+		for(int i = 0; i < enemies.size(); i++) {
+			
+			for(int x = i - 1; x > 0; x--) {
+				
+				if (enemies.get(x) > enemies.get(i) && enemies.get(x - 1) < enemies.get(i)) {
+					
+					enemies.add(x, enemies.remove(i));
+					break;
+					
+				}
+				
+			}
+			
+		}
+		
+		for(int element : enemies) {
+			
+			System.out.print(element + " ");
+			
+		}
 		
 	}
 	

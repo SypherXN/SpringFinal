@@ -7,8 +7,9 @@ public abstract class Enemy implements Description {
 	private String name, desc;
 	private Type type;
 	private int maxHP, hp, att, def, sp;
+	private int difficulty;
 	
-	public Enemy(String name, Type type, int maxHP, int hp, int att, int def, int sp, String desc) {
+	public Enemy(String name, Type type, int maxHP, int hp, int att, int def, int sp, String desc, int difficulty) {
 		
 		this.name = name;
 		this.type = type;
@@ -18,6 +19,7 @@ public abstract class Enemy implements Description {
 		this.def = def;
 		this.sp = sp;
 		this.desc = desc;
+		this.difficulty = difficulty;
 		
 	}
 	
@@ -33,6 +35,7 @@ public abstract class Enemy implements Description {
 	public void setHP(int hp) { this.hp = hp; }
 	public void setATT(int att) { this.att = att; }
 	public void setSP(int sp) { this.sp = sp; }
+	public void setDifficulty(int difficulty) { this.difficulty = difficulty; }
 	
 	//Accessor methods
 	public String getName() { return name; }
@@ -43,5 +46,6 @@ public abstract class Enemy implements Description {
 	public int getATT() { return att; }
 	public int getDEF() { return def; }
 	public int getSP() { return sp; }
+	public int getDifficulty() { return difficulty; }
 	
 }

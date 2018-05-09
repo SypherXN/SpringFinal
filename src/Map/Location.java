@@ -37,7 +37,19 @@ public abstract class Location implements Description {
 	 */
 	public void sortEnemies() {
 		
-		for(int i = 0; i < enemies.size())
+		for(int i = 0; i < enemies.size(); i++) {
+			
+			for(int x = i - 1; x > 0; x--) {
+				
+				if (enemies.get(x).getDifficulty() < enemies.get(i).getDifficulty()) {
+					
+					enemies.set(x, enemies.set(i, enemies.get(x)));
+					
+				}
+				
+			}
+			
+		}
 		
 	}
 	
