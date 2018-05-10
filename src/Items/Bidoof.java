@@ -57,4 +57,10 @@ public class Bidoof extends Item implements Weapon{
 		return 0;
 	}
 
+	@Override
+	public void applyEffect() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

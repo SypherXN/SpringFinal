@@ -26,9 +26,9 @@ public class TestWeapon extends Item implements Weapon {
 	public int getDurability() {return durability; }
 
 	@Override
-	public int getDurability() {
+	public void applyEffect() {
 		// TODO Auto-generated method stub
-		return 0;
+		
 	}
 
 }

@@ -1,11 +1,16 @@
 package Main;
 
 import Combat.Battle;
+import Enemy.D;
+import Enemy.Dargon;
+import Enemy.Enemy;
 import Items.Bidoof;
 import Items.Sword;
 import Items.TestPotion;
 import Items.TestWeapon;
+import Items.Weapon;
 import Player.PlayerInfo;
+import GameInfo.*;
 
 public class MainGame {
 
@@ -50,12 +55,23 @@ public class MainGame {
 		System.out.println(Map.printKnownMap());
 		*/
 		
+		PlayerInfo.initPlayer();
+		
+		System.out.println(PlayerInfo.getATT());
+		
 		PlayerInfo.addItem(new TestPotion("Test Potion", "This is a test"));
 		PlayerInfo.addItem(new Sword("Sword", "Another test"));
 		PlayerInfo.addItem(new TestWeapon("Test Weapon", "This is a test"));
 		PlayerInfo.addItem(new Bidoof("Bidoof", "Pokemon"));
 		
-		Battle.itemMenu();
+		Menu.backpackMenu();
+		
+		Enemy enemy = new D();
+		
+		Weapon weapon = new Sword("Sword", "This is a sword");
+		PlayerInfo.setWeapon(weapon);
+		
+		Battle.Battle(enemy);
 		
 	}
 	

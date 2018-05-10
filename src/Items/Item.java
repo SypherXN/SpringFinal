@@ -18,6 +18,8 @@ public abstract class Item implements Description{
 		
 	}
 	
+	public abstract void applyEffect();
+	
 	public String toString() { return name; }
 	
 	//Modifier Methods

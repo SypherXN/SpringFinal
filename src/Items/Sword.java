@@ -1,23 +1,23 @@
 package Items;
 
+import Combat.Burn;
 import Combat.Effect;
+import Player.PlayerInfo;
 
 public class Sword extends Item implements Weapon{
 
+	private final int damage = 5;
+	private int target;
+	private final Effect effect = new Burn();
+	
 	public Sword(String name, String desc) {
 		super(name, desc);
 		// TODO Auto-generated constructor stub
 	}
-
-	@Override
-	public void setDamage(int damage) {
-		// TODO Auto-generated method stub
+	
+	public Sword() {
 		
-	}
-
-	@Override
-	public void setEffect(Effect effect) {
-		// TODO Auto-generated method stub
+		super("Sword", "Your normal sword");
 		
 	}
 
@@ -55,6 +55,14 @@ public class Sword extends Item implements Weapon{
 	public int getDurability() {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	public void applyEffect() {
+		
+		PlayerInfo.setWeapon(new Sword());
+		System.out.println("You equip " + PlayerInfo.getWeapon());
+		
 	}
 
 }

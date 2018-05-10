@@ -12,10 +12,12 @@ public class D extends Enemy{
 	}
 
 	public D() {
-		super("D", Information.Normal, 999, 999, 999, 999, 999, "D", 999);
+		super("D", Information.Normal, 999, 999, 999, 999, 100000000, "D", 999);
 	}
+	
 	public void attack() {
-		// TODO Auto-generated method stub
+		
+		Combat.takeDamage();
 		
 	}
 

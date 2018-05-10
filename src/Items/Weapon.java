@@ -3,19 +3,6 @@ package Items;
 import Combat.*;
 
 public interface Weapon{
-
-	
-	/** Sets the damage of the weapon
-	 * 
-	 * @param damage - The damage of the weapon
-	 */
-	void setDamage(int damage);
-	
-	/** Sets the effect of the weapon
-	 * 
-	 * @param effect - The effect the weapon applies
-	 */
-	void setEffect(Effect effect);
 	
 	/** Sets the target for the weapon's effect
 	 * 

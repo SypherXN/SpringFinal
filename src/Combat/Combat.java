@@ -11,17 +11,33 @@ public class Combat {
 	
 	/** Calculates damage dealt to the enemy and inflicts the damage
 	 * 
-	 * @param def - defense of the enemy
-	 * @param weapon - weapon of the player
 	 */
-	public static void dealDamage(int def, Weapon weapon) { enemy.modHP((-(PlayerInfo.getATT() + weapon.getDamage()) * (100 / (100 + PlayerInfo.getDEF())))); }
+	public static void dealDamage() {
+		
+		double dmg = (((double)PlayerInfo.getATT() + (double)PlayerInfo.getWeapon().getDamage()) * (100.0 / (100.0 + (double)enemy.getDEF())));
+		int critChance = (int)(Math.random() * (100 - PlayerInfo.getSP()));
+		
+		if (critChance == 0) dmg *= 2;
+		
+		enemy.modHP(-(int)(dmg));
+		System.out.println("You deal " + (int)dmg + " damage to " + enemy);
+		
+	}
 	
 	/** Calculates damage taken and inflicts the damage to the player
 	 * 
-	 * @param att - attack of the enemy
-	 * @param def - defense of the player
 	 */
-	public static void takeDamage(int att) { PlayerInfo.modHP((-(att) * (100 / (100 + PlayerInfo.getDEF())))); }
+	public static void takeDamage() { 
+		
+		double dmg = ((double)enemy.getATT()) * (100.0 / (100.0 + (double)PlayerInfo.getDEF()));
+		int critChance = (int)(Math.random() * (100 - enemy.getSP()));
+		
+		if (critChance == 0) dmg *= 2;
+		
+		PlayerInfo.modHP(-(int)dmg);
+		System.out.println(enemy + " deals " + (int)dmg + " damage to you");
+		
+	}
 	
 	/** Applies the effect to the target
 	 * 

@@ -15,9 +15,10 @@ public class Dargon extends Enemy{
 		
 		super("dargon", Information.Normal, 50, 50, 5, 5, 5, "i cant spell", 999);
 	}
+	
 	public void attack() {
 
-		Combat.takeDamage(super.getATT());
+		Combat.takeDamage();
 		
 	}
 

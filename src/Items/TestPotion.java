@@ -21,4 +21,10 @@ public class TestPotion extends Item implements Potion {
 	public int getHeal() { return heal; }
 	public Effect getEffect() { return effect; }
 
+	@Override
+	public void applyEffect() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
