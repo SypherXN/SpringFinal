@@ -12,6 +12,7 @@ public abstract class Effect implements Description {
 	 * 
 	 * @param name - name of the effect
 	 * @param desc - description of the effect
+	 * @param turnCounter - turns left of the effect
 	 */
 	public Effect(String name, String desc, int turnCounter) {
 		

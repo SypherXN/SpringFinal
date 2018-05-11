@@ -2,18 +2,18 @@ package Combat;
 
 import Player.PlayerInfo;
 
-public class Burn extends Effect {
-	
-	public Burn() { super("Burn", "Deals damage over time and lowers defense", 3); }
-	
+public class Poison extends Effect {
+
+	public Poison() { super("Poison", "Deals damage every turn and reduces speed", 5); }
+
 	public void effect(int target) {
 		
 		//If the effect is already over it doesn't do anything
 		if (super.getTurnCounter() == 0) { return; }
 		
 		//Checks if the effect just started and applies a defense reduction to the target
-		if (super.getTurnCounter() == 3 && target == 1) { Combat.getEnemy().modDEF(-5); }
-		else if (super.getTurnCounter() == 3 && target == 0) { PlayerInfo.modDEF(-5); }
+		if (super.getTurnCounter() == 5 && target == 1) { Combat.getEnemy().modSP(-10); }
+		else if (super.getTurnCounter() == 5 && target == 0) { PlayerInfo.modSP(-10); }
 		
 		//Checks which is the target and damages the target
 		if (target == 1) { Combat.getEnemy().modHP(-5); }
@@ -27,9 +27,9 @@ public class Burn extends Effect {
 		else if (super.getTurnCounter() == 0 && target == 0) { System.out.println("You are no longer on fire"); }
 		
 		//Checks when the turnCounter hits zero and raises the targets defense back to normal
-		if (super.getTurnCounter() == 0 && target == 1) { Combat.getEnemy().modDEF(5); }
-		else if (super.getTurnCounter() == 0 && target == 0) { PlayerInfo.modDEF(5); }
-	
+		if (super.getTurnCounter() == 0 && target == 1) { Combat.getEnemy().modSP(10); }
+		else if (super.getTurnCounter() == 0 && target == 0) { PlayerInfo.modSP(10); }
+		
 	}
-	
+
 }

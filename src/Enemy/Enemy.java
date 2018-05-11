@@ -54,6 +54,9 @@ public abstract class Enemy implements Description, Comparable<Enemy> {
 	
 	//Combat Modifier Methods
 	public void modHP(int mod) { hp += mod; }
+	public void modATT(int mod) { att += mod; }
+	public void modDEF(int mod) { def += mod; }
+	public void modSP(int mod) { sp += mod; }
 	
 	//Modifier methods
 	public void setDesc(String desc) { this.desc = desc; }
@@ -61,6 +64,7 @@ public abstract class Enemy implements Description, Comparable<Enemy> {
 	public void setMaxHP() { this.maxHP = maxHP; }
 	public void setHP(int hp) { this.hp = hp; }
 	public void setATT(int att) { this.att = att; }
+	public void setDEF(int def) { this.def = def; }
 	public void setSP(int sp) { this.sp = sp; }
 	public void setDifficulty(int difficulty) { this.difficulty = difficulty; }
 	
