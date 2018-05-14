@@ -7,9 +7,9 @@ public class TestPotion extends Item implements Potion {
 	private int heal;
 	private Effect effect;
 	
-	public TestPotion(String name, String desc) {
+	public TestPotion() {
 		
-		super(name, desc);
+		super("Test Potion", "This is a test");
 		
 	}
 

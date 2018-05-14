@@ -4,8 +4,8 @@ import Combat.Effect;
 
 public class Bidoof extends Item implements Weapon{
 
-	public Bidoof(String name, String desc) {
-		super(name, desc);
+	public Bidoof() {
+		super("Bidoof", "IDK");
 		// TODO Auto-generated constructor stub
 	}
 

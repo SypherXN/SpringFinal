@@ -59,16 +59,16 @@ public class MainGame {
 		
 		System.out.println(PlayerInfo.getATT());
 		
-		PlayerInfo.addItem(new TestPotion("Test Potion", "This is a test"));
-		PlayerInfo.addItem(new Sword("Sword", "Another test"));
-		PlayerInfo.addItem(new TestWeapon("Test Weapon", "This is a test"));
-		PlayerInfo.addItem(new Bidoof("Bidoof", "Pokemon"));
+		PlayerInfo.addItem(new TestPotion());
+		PlayerInfo.addItem(new Sword());
+		PlayerInfo.addItem(new TestWeapon());
+		PlayerInfo.addItem(new Bidoof());
 		
 		Menu.backpackMenu();
 		
 		Enemy enemy = new D();
 		
-		Weapon weapon = new Sword("Sword", "This is a sword");
+		Weapon weapon = new Sword();
 		PlayerInfo.setWeapon(weapon);
 		
 		Battle.Battle(enemy);
