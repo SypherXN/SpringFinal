@@ -19,7 +19,7 @@ public class TestEnemy extends Enemy {
 
 	public void attack() {
 		
-		Combat.takeDamage(super.getATT());
+		Combat.takeDamage();
 		
 	}
 

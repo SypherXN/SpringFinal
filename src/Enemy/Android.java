@@ -20,7 +20,7 @@ public class Android extends Enemy{
 	
 	public void attack() {
 
-		Combat.takeDamage(super.getATT());
+		Combat.takeDamage();
 		
 	}
 
