@@ -10,18 +10,6 @@ public class Bidoof extends Item implements Weapon{
 	}
 
 	@Override
-	public void setDamage(int damage) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void setEffect(Effect effect) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public void setTargetEffect(int target) {
 		// TODO Auto-generated method stub
 		
@@ -41,18 +29,6 @@ public class Bidoof extends Item implements Weapon{
 
 	@Override
 	public int getTargetEffect() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public void setDurability(int durability) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public int getDurability() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
