@@ -13,7 +13,7 @@ public class Dargon extends Enemy{
 
 	public Dargon() {
 		
-		super("dargon", Information.Normal, 50, 50, 5, 5, 5, "i cant spell", 999);
+		super("dargon", Information.Normal, 50, 50, 5, 5, 5, "This is NOT a dragon", 999);
 	}
 	
 	public void attack() {

@@ -45,8 +45,8 @@ public class Map {
 		
 		if (direction.equals("L")) currentCol--;
 		else if (direction.equals("R")) currentCol++;
-		else if (direction.equals("U")) currentRow++;
-		else if (direction.equals("D")) currentRow--;
+		else if (direction.equals("U")) currentRow--;
+		else if (direction.equals("D")) currentRow++;
 		
 		discoverLocation(currentRow, currentCol);
 		

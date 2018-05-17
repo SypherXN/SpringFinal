@@ -11,6 +11,7 @@ import Items.TestWeapon;
 import Items.Weapon;
 import Player.PlayerInfo;
 import GameInfo.*;
+import Map.*;
 
 public class MainGame {
 
@@ -64,14 +65,19 @@ public class MainGame {
 		PlayerInfo.addItem(new TestWeapon());
 		PlayerInfo.addItem(new Bidoof());
 		
-		Menu.backpackMenu();
-		
-		Enemy enemy = new D();
+		Enemy enemy = new Dargon();
 		
 		Weapon weapon = new Sword();
 		PlayerInfo.setWeapon(weapon);
 		
-		Battle.Battle(enemy);
+		//Battle.Battle(enemy);
+		
+		Location[] arr = {new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation()};
+		
+		Map.initMap(arr);
+		
+		
+		for (int i = 0; i < 15; i++) Menu.mainMenu();
 		
 	}
 	

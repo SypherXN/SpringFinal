@@ -70,6 +70,63 @@ public class Battle {
 	
 	public static void itemMenu() {
 		
+		String itemMenu = "What would you like to do?\n"
+						+ "1. Check Item Description\n"
+						+ "2. Use Item";
+		
+		System.out.println(itemMenu);
+		
+		int choice = 0;
+		
+		while (choice < 1 || choice > 2) {
+			
+			try {
+				
+				choice = input.nextInt();
+				
+				if (choice == 1) checkItemMenu();
+				else if (choice == 2) useItemMenu();
+				else System.out.println("That is an invalid choice, try again");
+				
+			} catch(InputMismatchException e) { System.out.println("That is an invalid choice, try again"); } finally { if (choice < 1 || choice > 2) { input.nextLine(); } else { } }
+			
+		}
+		
+	}
+	
+	public static void checkItemMenu() {
+		
+		String checkItemMenu = "What would you like to learn about?\n";
+		
+		for(int i = 0; i < PlayerInfo.getBackpack().size(); i++) {
+			
+			checkItemMenu += (i+1) + ". " + PlayerInfo.getItem(i) + "\n";
+			
+		}
+		
+		System.out.println(checkItemMenu);
+		int choice = 0;
+		
+		while (choice < 1 || choice > PlayerInfo.getBackpack().size()) {
+			
+			try {
+				
+				choice = input.nextInt();
+				
+				if (choice > 0 && choice <= PlayerInfo.getBackpack().size()) {
+					
+					System.out.println(PlayerInfo.getItem(choice - 1).getDesc());
+					
+				} else System.out.println("That is an invalid choice, try again");
+				
+			} catch(InputMismatchException e) { System.out.println("That is an invalid choice, try again"); } finally { if (choice < 1 || choice > PlayerInfo.getBackpack().size()) { input.nextLine(); } else { } }
+			
+		}
+		
+	}
+	
+	public static void useItemMenu() {
+		
 		String itemMenu = "What would you like to use?\n";
 		
 		for(int i = 0; i < PlayerInfo.getBackpack().size(); i++) {
@@ -89,7 +146,7 @@ public class Battle {
 				
 				if (choice > 0 && choice <= PlayerInfo.getBackpack().size()) {
 					
-					System.out.println(PlayerInfo.getItem(choice - 1));
+					PlayerInfo.getItem(choice - 1).applyEffect();
 					
 				} else System.out.println("That is an invalid choice, try again");
 				
