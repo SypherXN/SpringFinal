@@ -1,8 +1,8 @@
 package Enemy;
 
 import Combat.Combat;
-import GameInfo.*;
-import Player.PlayerInfo;
+import GameInfo.Information;
+import GameInfo.Type;
 
 public class Android extends Enemy{
 

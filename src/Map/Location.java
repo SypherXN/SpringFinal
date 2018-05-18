@@ -1,8 +1,10 @@
 package Map;
 
-import java.util.*;
-import Enemy.*;
-import GameInfo.*;
+import java.util.ArrayList;
+import java.util.Collections;
+
+import Enemy.Enemy;
+import GameInfo.Description;
 
 public abstract class Location implements Description {
 

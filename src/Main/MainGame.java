@@ -1,17 +1,17 @@
 package Main;
 
-import Combat.Battle;
-import Enemy.D;
 import Enemy.Dargon;
 import Enemy.Enemy;
+import GameInfo.Menu;
 import Items.Bidoof;
 import Items.Sword;
 import Items.TestPotion;
 import Items.TestWeapon;
 import Items.Weapon;
+import Map.Location;
+import Map.Map;
+import Map.TestLocation;
 import Player.PlayerInfo;
-import GameInfo.*;
-import Map.*;
 
 public class MainGame {
 

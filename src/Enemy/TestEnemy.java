@@ -1,7 +1,8 @@
 package Enemy;
 
 import Combat.Combat;
-import GameInfo.*;
+import GameInfo.Information;
+import GameInfo.Type;
 
 public class TestEnemy extends Enemy {
 

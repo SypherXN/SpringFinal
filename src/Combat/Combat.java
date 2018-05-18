@@ -1,8 +1,7 @@
 package Combat;
 
-import Enemy.*;
-import Items.*;
-import Player.*;
+import Enemy.Enemy;
+import Player.PlayerInfo;
 
 public class Combat {
 

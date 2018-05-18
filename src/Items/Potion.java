@@ -1,6 +1,6 @@
 package Items;
 
-import Combat.*;
+import Combat.Effect;
 
 public interface Potion {
 

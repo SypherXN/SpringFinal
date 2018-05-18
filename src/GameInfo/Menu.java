@@ -3,9 +3,8 @@ package GameInfo;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import Combat.Combat;
-import Player.PlayerInfo;
 import Map.Map;
+import Player.PlayerInfo;
 
 public class Menu {
 
