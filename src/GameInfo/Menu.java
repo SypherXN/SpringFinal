@@ -159,6 +159,13 @@ public class Menu {
 	
 	public static void backpackMenu() {
 	
+		if (PlayerInfo.getBackpack().size() < 1) {
+			
+			System.out.println("Your backpack is empty");
+			return;
+			
+		}
+		
 		System.out.print(backpackMenu);
 		int choice = 0;
 		

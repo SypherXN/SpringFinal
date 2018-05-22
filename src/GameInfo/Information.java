@@ -1,5 +1,8 @@
 package GameInfo;
 
+import Map.Location;
+import Map.TestLocation;
+
 public class Information {
 
 	//Initializes the types
@@ -33,6 +36,12 @@ public class Information {
 		Ground.addWeakness();
 		Ice.addWeakness();
 		Electric.addWeakness();
+		
+	}
+	
+	public static void initEnemiesLocation(Location...locations) {
+		
+	
 		
 	}
 	
