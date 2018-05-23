@@ -12,7 +12,8 @@ public class Menu {
 	private static final String mainMenu = "What would you like to do?\n"
 										+ "1. Search for enemies\n"
 										+ "2. Look at map\n"
-										+ "3. Check backpack";
+										+ "3. Check backpack\n"
+										+ "4. Quit";
 	private static final String mapMenu = "What would you like to do?\n"
 										+ "1. Move to adjacent location\n"
 										+ "2. Check information of locations";
@@ -35,7 +36,7 @@ public class Menu {
 		System.out.println(mainMenu);
 		int choice = 0;
 		
-		while (choice < 1 || choice > 3) {
+		while (choice < 1 || choice > 4) {
 			
 			try {
 				
@@ -44,6 +45,7 @@ public class Menu {
 				if (choice == 1) { }
 				else if (choice == 2) { mapMenu(); }
 				else if (choice == 3) { backpackMenu(); }
+				else if (choice == 4) {break;}
 				else System.out.println("That is an invalid choice, try again");
 				
 			} catch(InputMismatchException e) { System.out.println("That is an invalid choice, try again"); } finally { if (choice < 1 || choice > 3) { input.nextLine(); } else { } }
