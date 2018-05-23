@@ -17,13 +17,17 @@ public class MainGame {
 		String response = input.nextLine();
 		
 		if(response.toLowerCase().equals("yes")) {
+			
 			int win = (int)Math.random() * 100;
+			
 			if(win == 0) {
+				
 				System.out.println("You won the game. It must have been easy.");
 				
 			}
-		}
-		else {
+			
+		} else {
+			
 			System.out.println("Too bad. You could have won!");
 			
 			PlayerInfo.initPlayer();
@@ -34,11 +38,12 @@ public class MainGame {
 			Information.initWeaknesses();
 			Information.initEnemiesLocation(arr);
 			
-			while(PlayerInfo.getHP() > 0 || Menu.mainMenu != 4) {
+			while(PlayerInfo.getHP() > 0) {
 				
 				Menu.mainMenu();
 				
 			}
+			
 		}
 		
 		

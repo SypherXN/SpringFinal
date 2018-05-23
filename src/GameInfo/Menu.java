@@ -45,7 +45,7 @@ public class Menu {
 				if (choice == 1) { }
 				else if (choice == 2) { mapMenu(); }
 				else if (choice == 3) { backpackMenu(); }
-				else if (choice == 4) {break;}
+				else if (choice == 4) { System.exit(0); }
 				else System.out.println("That is an invalid choice, try again");
 				
 			} catch(InputMismatchException e) { System.out.println("That is an invalid choice, try again"); } finally { if (choice < 1 || choice > 3) { input.nextLine(); } else { } }
