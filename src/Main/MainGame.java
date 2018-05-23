@@ -13,6 +13,7 @@ public class MainGame {
 	public static void main(String [] args) {
 		
 		Scanner input = new Scanner(System.in);
+		
 		System.out.println("Would you like to try to win the game now?");	
 		String response = input.nextLine();
 		
