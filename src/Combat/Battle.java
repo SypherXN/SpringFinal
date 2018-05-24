@@ -166,7 +166,7 @@ public class Battle {
 	public static void run() {
 		
 		System.out.println("You attempt to run but the " + Combat.getEnemy() + " is too fast!");
-		System..out.println("GAME OVER!");
+		System.out.println("GAME OVER!");
 		System.exit(0);
 		
 	}
