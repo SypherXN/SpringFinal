@@ -13,7 +13,7 @@ public class MainGame {
 	public static void main(String [] args) {
 		
 		Scanner input = new Scanner(System.in);
-		
+		System.out.println("DISCLAIMER: This game is in development and may be in development forever. There is a high chance this will not run as intended.");
 		System.out.println("Would you like to try to win the game now?");	
 		String response = input.nextLine();
 		
@@ -26,11 +26,15 @@ public class MainGame {
 				System.out.println("You won the game. It must have been easy.");
 				System.exit(0);
 				
+			}else {
+				System.out.println("Too bad. Better luck next time.");
 			}
 			
-		}
+		}else {
 			
 		System.out.println("Too bad. You could have won!");
+		
+		}
 		
 		PlayerInfo.initPlayer();
 		Location[] arr = {new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation()};
