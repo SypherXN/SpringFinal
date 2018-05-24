@@ -70,6 +70,13 @@ public class Battle {
 	
 	public static void itemMenu() {
 		
+		if (PlayerInfo.getBackpack().size() == 0) {
+			
+			System.out.println("Your backpack is empty");
+			return;
+			
+		}
+		
 		String itemMenu = "What would you like to do?\n"
 						+ "1. Check Item Description\n"
 						+ "2. Use Item";
