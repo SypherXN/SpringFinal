@@ -13,6 +13,7 @@ public class Combat {
 	 */
 	public static void dealDamage() {
 		
+		System.out.println(PlayerInfo.getATT());
 		double dmg = (((double)PlayerInfo.getATT() + (double)PlayerInfo.getWeapon().getDamage()) * (100.0 / (100.0 + (double)enemy.getDEF())));
 		int critChance = (int)(Math.random() * (100 - PlayerInfo.getSP()));
 		

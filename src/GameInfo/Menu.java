@@ -3,6 +3,7 @@ package GameInfo;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import Combat.Battle;
 import Map.Map;
 import Player.PlayerInfo;
 
@@ -42,7 +43,7 @@ public class Menu {
 				
 				choice = input.nextInt();
 				
-				if (choice == 1) { }
+				if (choice == 1) { Battle.Battle(Map.getCurrent().getEnemy()); }
 				else if (choice == 2) { mapMenu(); }
 				else if (choice == 3) { backpackMenu(); }
 				else if (choice == 4) { System.exit(0); }

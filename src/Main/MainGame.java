@@ -1,12 +1,18 @@
 package Main;
 
+import java.util.Scanner;
+
 import GameInfo.Information;
 import GameInfo.Menu;
+import Items.Sword;
+import Items.Weapon;
+import Map.Cave;
+import Map.Lake;
 import Map.Location;
 import Map.Map;
+import Map.School;
 import Map.TestLocation;
 import Player.PlayerInfo;
-import java.util.*;
 
 public class MainGame {
 
@@ -37,7 +43,32 @@ public class MainGame {
 		}
 		
 		PlayerInfo.initPlayer();
-		Location[] arr = {new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation(), new TestLocation()};
+		Weapon base = new Sword();
+		PlayerInfo.setWeapon(base);
+		Location[] arr = new Location[25];
+		
+		for (int i = 0; i < arr.length; i++) {
+			
+			int thing = (int)(Math.random() * 4);
+			switch(thing) {
+			
+				case 0:
+					arr[i] = new Cave();
+					break;
+				case 1:
+					arr[i] = new Lake();
+					break;
+				case 2:
+					arr[i] = new School();
+					break;
+				case 3:
+					arr[i] = new TestLocation();
+					break;
+			
+			}
+			
+		}
+		
 		Map.initMap(arr);
 		
 		Information.initResistances();

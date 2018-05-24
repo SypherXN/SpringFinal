@@ -123,5 +123,6 @@ public class Map {
 	//Accessor Methods
 	public static int getCurrentRow() { return currentRow; }
 	public static int getCurrentCol() { return currentCol; }
+	public static Location getCurrent() { return map[currentRow][currentCol]; }
 	
 }

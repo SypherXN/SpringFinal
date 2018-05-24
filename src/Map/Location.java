@@ -39,21 +39,10 @@ public abstract class Location implements Description {
 		
 	}
 	
-	/** Sorts the enemy by level of difficulty by SELECTION SORT
+	/** Sorts the enemy by level of difficulty
 	 * 
 	 */
-	public void sortEnemies() { 
-		for(int i = 0; i < enemies.size() - 1; i++) {
-			int min = i;
-			for(int j = i + 1; j < enemies.size(); j++) {
-				if(enemies.get(j).compareTo(enemies.get(min)) < 0) {
-					min = j;
-				}
-			}
-			enemies.add(min, enemies.get(i));
-			enemies.set(i, enemies.remove(min + 1));
-		}
-	}
+	public void sortEnemies() { Collections.sort(enemies); }
 	
 	//Modifier Methods
 	public void setName(String name) { this.name = name; }
@@ -62,6 +51,12 @@ public abstract class Location implements Description {
 	//Accessor Methods
 	public String getName() { return name; }
 	public String getDesc() { return desc; }
+	public Enemy getEnemy() { 
+		
+		int index = (int)(Math.random() * enemies.size());
+		return enemies.get(index);
+		
+	}
 	
 	
 }
